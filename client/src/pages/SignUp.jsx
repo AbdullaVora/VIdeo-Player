@@ -20,6 +20,7 @@ const SignUp = () => {
 
             if (response.status === 201) {
                 alert('Data added successfully!');
+                navigate('/')
             }
 
 
@@ -33,7 +34,7 @@ const SignUp = () => {
         <div>
             <div className="login-container">
                 <div className="login-box">
-                    <h1 className="login-title">SignIn</h1>
+                    <h1 className="login-title">SignUp</h1>
                     <form onSubmit={handleSubmit}>
                         <div className="input-group">
                             <label htmlFor="Name">Name</label>
@@ -47,9 +48,9 @@ const SignUp = () => {
                             <label htmlFor="password">Password</label>
                             <input type="password" id="password" placeholder="Enter your password" required onChange={(e) => setPassword(e.target.value)} />
                         </div>
-                        <button type="submit" className="login-button" >signIn</button>
+                        <button type="submit" className="login-button" >signUp</button>
                     </form>
-                    <Link to={'/'}><button type="button" className="login-button" style={{ marginTop: '10px' }} onClick={handleLogin}>Login</button></Link>
+                    <Link to={'/'}><button type="button" className="login-button" style={{ marginTop: '10px' }}>Login</button></Link>
                 </div>
             </div>
         </div>
